@@ -1,0 +1,1388 @@
+{
+  "buildings": [
+    {
+      "id": 1,
+      "name": "A栋教学楼",
+      "floors": [
+        {
+          "floor": 1,
+          "weeklyUsage": [
+            {
+              "day": "周一",
+              "waterUsage": 4,
+              "waterCost": 60,
+              "electricityUsage": 16,
+              "electricityCost": 180,
+              "totalCost": 240
+            },
+            {
+              "day": "周二",
+              "waterUsage": 4,
+              "waterCost": 48,
+              "electricityUsage": 15,
+              "electricityCost": 177,
+              "totalCost": 225
+            },
+            {
+              "day": "周三",
+              "waterUsage": 5,
+              "waterCost": 60,
+              "electricityUsage": 16,
+              "electricityCost": 180,
+              "totalCost": 240
+            },
+            {
+              "day": "周四",
+              "waterUsage": 4,
+              "waterCost": 48,
+              "electricityUsage": 15,
+              "electricityCost": 177,
+              "totalCost": 225
+            },
+            {
+              "day": "周五",
+              "waterUsage": 4,
+              "waterCost": 48,
+              "electricityUsage": 12,
+              "electricityCost": 132,
+              "totalCost": 180
+            },
+            {
+              "day": "周六",
+              "waterUsage": 2,
+              "waterCost": 24,
+              "electricityUsage": 4,
+              "electricityCost": 36,
+              "totalCost": 60
+            },
+            {
+              "day": "周日",
+              "waterUsage": 1,
+              "waterCost": 12,
+              "electricityUsage": 2,
+              "electricityCost": 18,
+              "totalCost": 30
+            }
+          ],
+          "monthlyTotal": {
+            "waterUsage": 25,
+            "waterCost": 300,
+            "electricityUsage": 80,
+            "electricityCost": 900,
+            "totalCost": 1200
+          }
+        },
+        {
+          "floor": 2,
+          "weeklyUsage": [
+            {
+              "day": "周一",
+              "waterUsage": 6,
+              "waterCost": 72,
+              "electricityUsage": 18,
+              "electricityCost": 202.5,
+              "totalCost": 274.5
+            },
+            {
+              "day": "周二",
+              "waterUsage": 5,
+              "waterCost": 60,
+              "electricityUsage": 17,
+              "electricityCost": 191.25,
+              "totalCost": 251.25
+            },
+            {
+              "day": "周三",
+              "waterUsage": 6,
+              "waterCost": 72,
+              "electricityUsage": 18,
+              "electricityCost": 202.5,
+              "totalCost": 274.5
+            },
+            {
+              "day": "周四",
+              "waterUsage": 5,
+              "waterCost": 60,
+              "electricityUsage": 17,
+              "electricityCost": 191.25,
+              "totalCost": 251.25
+            },
+            {
+              "day": "周五",
+              "waterUsage": 5,
+              "waterCost": 60,
+              "electricityUsage": 14,
+              "electricityCost": 157.5,
+              "totalCost": 217.5
+            },
+            {
+              "day": "周六",
+              "waterUsage": 3,
+              "waterCost": 36,
+              "electricityUsage": 6,
+              "electricityCost": 67.5,
+              "totalCost": 103.5
+            },
+            {
+              "day": "周日",
+              "waterUsage": 2,
+              "waterCost": 24,
+              "electricityUsage": 3,
+              "electricityCost": 33.75,
+              "totalCost": 57.75
+            }
+          ],
+          "monthlyTotal": {
+            "waterUsage": 32,
+            "waterCost": 384,
+            "electricityUsage": 93,
+            "electricityCost": 1046.25,
+            "totalCost": 1430.25
+          }
+        },
+        {
+          "floor": 3,
+          "weeklyUsage": [
+            {
+              "day": "周一",
+              "waterUsage": 7,
+              "waterCost": 84,
+              "electricityUsage": 20,
+              "electricityCost": 225,
+              "totalCost": 309
+            },
+            {
+              "day": "周二",
+              "waterUsage": 6,
+              "waterCost": 72,
+              "electricityUsage": 19,
+              "electricityCost": 213.75,
+              "totalCost": 285.75
+            },
+            {
+              "day": "周三",
+              "waterUsage": 7,
+              "waterCost": 84,
+              "electricityUsage": 20,
+              "electricityCost": 225,
+              "totalCost": 309
+            },
+            {
+              "day": "周四",
+              "waterUsage": 6,
+              "waterCost": 72,
+              "electricityUsage": 19,
+              "electricityCost": 213.75,
+              "totalCost": 285.75
+            },
+            {
+              "day": "周五",
+              "waterUsage": 6,
+              "waterCost": 72,
+              "electricityUsage": 16,
+              "electricityCost": 180,
+              "totalCost": 252
+            },
+            {
+              "day": "周六",
+              "waterUsage": 4,
+              "waterCost": 36,
+              "electricityUsage": 8,
+              "electricityCost": 90,
+              "totalCost": 126
+            },
+            {
+              "day": "周日",
+              "waterUsage": 3,
+              "waterCost": 36,
+              "electricityUsage": 4,
+              "electricityCost": 45,
+              "totalCost": 81
+            }
+          ],
+          "monthlyTotal": {
+            "waterUsage": 39,
+            "waterCost": 468,
+            "electricityUsage": 106,
+            "electricityCost": 1192.5,
+            "totalCost": 1660.5
+          }
+        },
+        {
+          "floor": 4,
+          "weeklyUsage": [
+            {
+              "day": "周一",
+              "waterUsage": 8,
+              "waterCost": 96,
+              "electricityUsage": 22,
+              "electricityCost": 247.5,
+              "totalCost": 343.5
+            },
+            {
+              "day": "周二",
+              "waterUsage": 7,
+              "waterCost": 84,
+              "electricityUsage": 21,
+              "electricityCost": 236.25,
+              "totalCost": 320.25
+            },
+            {
+              "day": "周三",
+              "waterUsage": 8,
+              "waterCost": 96,
+              "electricityUsage": 22,
+              "electricityCost": 247.5,
+              "totalCost": 343.5
+            },
+            {
+              "day": "周四",
+              "waterUsage": 7,
+              "waterCost": 84,
+              "electricityUsage": 21,
+              "electricityCost": 236.25,
+              "totalCost": 320.25
+            },
+            {
+              "day": "周五",
+              "waterUsage": 7,
+              "waterCost": 84,
+              "electricityUsage": 18,
+              "electricityCost": 202.5,
+              "totalCost": 286.5
+            },
+            {
+              "day": "周六",
+              "waterUsage": 5,
+              "waterCost": 60,
+              "electricityUsage": 10,
+              "electricityCost": 112.5,
+              "totalCost": 172.5
+            },
+            {
+              "day": "周日",
+              "waterUsage": 4,
+              "waterCost": 48,
+              "electricityUsage": 5,
+              "electricityCost": 56.25,
+              "totalCost": 104.25
+            }
+          ],
+          "monthlyTotal": {
+            "waterUsage": 46,
+            "waterCost": 552,
+            "electricityUsage": 119,
+            "electricityCost": 1338.75,
+            "totalCost": 1890.75
+          }
+        },
+        {
+          "floor": 5,
+          "weeklyUsage": [
+            {
+              "day": "周一",
+              "waterUsage": 9,
+              "waterCost": 108,
+              "electricityUsage": 24,
+              "electricityCost": 270,
+              "totalCost": 378
+            },
+            {
+              "day": "周二",
+              "waterUsage": 8,
+              "waterCost": 96,
+              "electricityUsage": 23,
+              "electricityCost": 258.75,
+              "totalCost": 354.75
+            },
+            {
+              "day": "周三",
+              "waterUsage": 9,
+              "waterCost": 108,
+              "electricityUsage": 24,
+              "electricityCost": 270,
+              "totalCost": 378
+            },
+            {
+              "day": "周四",
+              "waterUsage": 8,
+              "waterCost": 96,
+              "electricityUsage": 23,
+              "electricityCost": 258.75,
+              "totalCost": 354.75
+            },
+            {
+              "day": "周五",
+              "waterUsage": 8,
+              "waterCost": 96,
+              "electricityUsage": 20,
+              "electricityCost": 225,
+              "totalCost": 321
+            },
+            {
+              "day": "周六",
+              "waterUsage": 6,
+              "waterCost": 72,
+              "electricityUsage": 12,
+              "electricityCost": 135,
+              "totalCost": 207
+            },
+            {
+              "day": "周日",
+              "waterUsage": 5,
+              "waterCost": 60,
+              "electricityUsage": 6,
+              "electricityCost": 67.5,
+              "totalCost": 127.5
+            }
+          ],
+          "monthlyTotal": {
+            "waterUsage": 53,
+            "waterCost": 636,
+            "electricityUsage": 132,
+            "electricityCost": 1485,
+            "totalCost": 2121
+          }
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "B栋教学楼",
+      "floors": [
+        {
+          "floor": 1,
+          "weeklyUsage": [
+            {
+              "day": "周一",
+              "waterUsage": 4,
+              "waterCost": 48,
+              "electricityUsage": 14,
+              "electricityCost": 157.5,
+              "totalCost": 205.5
+            },
+            {
+              "day": "周二",
+              "waterUsage": 3,
+              "waterCost": 36,
+              "electricityUsage": 13,
+              "electricityCost": 146.25,
+              "totalCost": 182.25
+            },
+            {
+              "day": "周三",
+              "waterUsage": 4,
+              "waterCost": 48,
+              "electricityUsage": 14,
+              "electricityCost": 157.5,
+              "totalCost": 205.5
+            },
+            {
+              "day": "周四",
+              "waterUsage": 3,
+              "waterCost": 36,
+              "electricityUsage": 13,
+              "electricityCost": 146.25,
+              "totalCost": 182.25
+            },
+            {
+              "day": "周五",
+              "waterUsage": 3,
+              "waterCost": 36,
+              "electricityUsage": 10,
+              "electricityCost": 112.5,
+              "totalCost": 148.5
+            },
+            {
+              "day": "周六",
+              "waterUsage": 1,
+              "waterCost": 12,
+              "electricityUsage": 3,
+              "electricityCost": 33.75,
+              "totalCost": 45.75
+            },
+            {
+              "day": "周日",
+              "waterUsage": 0.5,
+              "waterCost": 6,
+              "electricityUsage": 1,
+              "electricityCost": 11.25,
+              "totalCost": 17.25
+            }
+          ],
+          "monthlyTotal": {
+            "waterUsage": 18.5,
+            "waterCost": 222,
+            "electricityUsage": 68,
+            "electricityCost": 765,
+            "totalCost": 987
+          }
+        },
+        {
+          "floor": 2,
+          "weeklyUsage": [
+            {
+              "day": "周一",
+              "waterUsage": 5,
+              "waterCost": 60,
+              "electricityUsage": 16,
+              "electricityCost": 180,
+              "totalCost": 240
+            },
+            {
+              "day": "周二",
+              "waterUsage": 4,
+              "waterCost": 48,
+              "electricityUsage": 15,
+              "electricityCost": 168.75,
+              "totalCost": 216.75
+            },
+            {
+              "day": "周三",
+              "waterUsage": 5,
+              "waterCost": 60,
+              "electricityUsage": 16,
+              "electricityCost": 180,
+              "totalCost": 240
+            },
+            {
+              "day": "周四",
+              "waterUsage": 4,
+              "waterCost": 48,
+              "electricityUsage": 15,
+              "electricityCost": 168.75,
+              "totalCost": 216.75
+            },
+            {
+              "day": "周五",
+              "waterUsage": 4,
+              "waterCost": 48,
+              "electricityUsage": 12,
+              "electricityCost": 135,
+              "totalCost": 183
+            },
+            {
+              "day": "周六",
+              "waterUsage": 2,
+              "waterCost": 24,
+              "electricityUsage": 5,
+              "electricityCost": 56.25,
+              "totalCost": 80.25
+            },
+            {
+              "day": "周日",
+              "waterUsage": 1,
+              "waterCost": 12,
+              "electricityUsage": 2,
+              "electricityCost": 22.5,
+              "totalCost": 34.5
+            }
+          ],
+          "monthlyTotal": {
+            "waterUsage": 25,
+            "waterCost": 300,
+            "electricityUsage": 81,
+            "electricityCost": 911.25,
+            "totalCost": 1211.25
+          }
+        },
+        {
+          "floor": 3,
+          "weeklyUsage": [
+            {
+              "day": "周一",
+              "waterUsage": 6,
+              "waterCost": 72,
+              "electricityUsage": 18,
+              "electricityCost": 202.5,
+              "totalCost": 274.5
+            },
+            {
+              "day": "周二",
+              "waterUsage": 5,
+              "waterCost": 60,
+              "electricityUsage": 17,
+              "electricityCost": 191.25,
+              "totalCost": 251.25
+            },
+            {
+              "day": "周三",
+              "waterUsage": 6,
+              "waterCost": 72,
+              "electricityUsage": 18,
+              "electricityCost": 202.5,
+              "totalCost": 274.5
+            },
+            {
+              "day": "周四",
+              "waterUsage": 5,
+              "waterCost": 60,
+              "electricityUsage": 17,
+              "electricityCost": 191.25,
+              "totalCost": 251.25
+            },
+            {
+              "day": "周五",
+              "waterUsage": 5,
+              "waterCost": 60,
+              "electricityUsage": 14,
+              "electricityCost": 157.5,
+              "totalCost": 217.5
+            },
+            {
+              "day": "周六",
+              "waterUsage": 3,
+              "waterCost": 36,
+              "electricityUsage": 7,
+              "electricityCost": 78.75,
+              "totalCost": 114.75
+            },
+            {
+              "day": "周日",
+              "waterUsage": 2,
+              "waterCost": 24,
+              "electricityUsage": 3,
+              "electricityCost": 33.75,
+              "totalCost": 57.75
+            }
+          ],
+          "monthlyTotal": {
+            "waterUsage": 32,
+            "waterCost": 384,
+            "electricityUsage": 94,
+            "electricityCost": 1057.5,
+            "totalCost": 1441.5
+          }
+        },
+        {
+          "floor": 4,
+          "weeklyUsage": [
+            {
+              "day": "周一",
+              "waterUsage": 7,
+              "waterCost": 84,
+              "electricityUsage": 20,
+              "electricityCost": 225,
+              "totalCost": 309
+            },
+            {
+              "day": "周二",
+              "waterUsage": 6,
+              "waterCost": 72,
+              "electricityUsage": 19,
+              "electricityCost": 213.75,
+              "totalCost": 285.75
+            },
+            {
+              "day": "周三",
+              "waterUsage": 7,
+              "waterCost": 84,
+              "electricityUsage": 20,
+              "electricityCost": 225,
+              "totalCost": 309
+            },
+            {
+              "day": "周四",
+              "waterUsage": 6,
+              "waterCost": 72,
+              "electricityUsage": 19,
+              "electricityCost": 213.75,
+              "totalCost": 285.75
+            },
+            {
+              "day": "周五",
+              "waterUsage": 6,
+              "waterCost": 72,
+              "electricityUsage": 16,
+              "electricityCost": 180,
+              "totalCost": 252
+            },
+            {
+              "day": "周六",
+              "waterUsage": 4,
+              "waterCost": 48,
+              "electricityUsage": 9,
+              "electricityCost": 101.25,
+              "totalCost": 149.25
+            },
+            {
+              "day": "周日",
+              "waterUsage": 3,
+              "waterCost": 36,
+              "electricityUsage": 4,
+              "electricityCost": 45,
+              "totalCost": 81
+            }
+          ],
+          "monthlyTotal": {
+            "waterUsage": 39,
+            "waterCost": 468,
+            "electricityUsage": 107,
+            "electricityCost": 1203.75,
+            "totalCost": 1671.75
+          }
+        },
+        {
+          "floor": 5,
+          "weeklyUsage": [
+            {
+              "day": "周一",
+              "waterUsage": 8,
+              "waterCost": 96,
+              "electricityUsage": 22,
+              "electricityCost": 247.5,
+              "totalCost": 343.5
+            },
+            {
+              "day": "周二",
+              "waterUsage": 7,
+              "waterCost": 84,
+              "electricityUsage": 21,
+              "electricityCost": 236.25,
+              "totalCost": 320.25
+            },
+            {
+              "day": "周三",
+              "waterUsage": 8,
+              "waterCost": 96,
+              "electricityUsage": 22,
+              "electricityCost": 247.5,
+              "totalCost": 343.5
+            },
+            {
+              "day": "周四",
+              "waterUsage": 7,
+              "waterCost": 84,
+              "electricityUsage": 21,
+              "electricityCost": 236.25,
+              "totalCost": 320.25
+            },
+            {
+              "day": "周五",
+              "waterUsage": 7,
+              "waterCost": 84,
+              "electricityUsage": 18,
+              "electricityCost": 202.5,
+              "totalCost": 286.5
+            },
+            {
+              "day": "周六",
+              "waterUsage": 5,
+              "waterCost": 60,
+              "electricityUsage": 11,
+              "electricityCost": 123.75,
+              "totalCost": 183.75
+            },
+            {
+              "day": "周日",
+              "waterUsage": 4,
+              "waterCost": 48,
+              "electricityUsage": 5,
+              "electricityCost": 56.25,
+              "totalCost": 104.25
+            }
+          ],
+          "monthlyTotal": {
+            "waterUsage": 46,
+            "waterCost": 552,
+            "electricityUsage": 120,
+            "electricityCost": 1350,
+            "totalCost": 1902
+          }
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "name": "C栋教学楼",
+      "floors": [
+        {
+          "floor": 1,
+          "weeklyUsage": [
+            {
+              "day": "周一",
+              "waterUsage": 3,
+              "waterCost": 36,
+              "electricityUsage": 12,
+              "electricityCost": 135,
+              "totalCost": 171
+            },
+            {
+              "day": "周二",
+              "waterUsage": 2,
+              "waterCost": 24,
+              "electricityUsage": 11,
+              "electricityCost": 123.75,
+              "totalCost": 147.75
+            },
+            {
+              "day": "周三",
+              "waterUsage": 3,
+              "waterCost": 36,
+              "electricityUsage": 12,
+              "electricityCost": 135,
+              "totalCost": 171
+            },
+            {
+              "day": "周四",
+              "waterUsage": 2,
+              "waterCost": 24,
+              "electricityUsage": 11,
+              "electricityCost": 123.75,
+              "totalCost": 147.75
+            },
+            {
+              "day": "周五",
+              "waterUsage": 2,
+              "waterCost": 24,
+              "electricityUsage": 8,
+              "electricityCost": 90,
+              "totalCost": 114
+            },
+            {
+              "day": "周六",
+              "waterUsage": 1,
+              "waterCost": 12,
+              "electricityUsage": 2,
+              "electricityCost": 22.5,
+              "totalCost": 34.5
+            },
+            {
+              "day": "周日",
+              "waterUsage": 0.5,
+              "waterCost": 6,
+              "electricityUsage": 1,
+              "electricityCost": 11.25,
+              "totalCost": 17.25
+            }
+          ],
+          "monthlyTotal": {
+            "waterUsage": 13.5,
+            "waterCost": 162,
+            "electricityUsage": 57,
+            "electricityCost": 641.25,
+            "totalCost": 803.25
+          }
+        },
+        {
+          "floor": 2,
+          "weeklyUsage": [
+            {
+              "day": "周一",
+              "waterUsage": 4,
+              "waterCost": 48,
+              "electricityUsage": 14,
+              "electricityCost": 157.5,
+              "totalCost": 205.5
+            },
+            {
+              "day": "周二",
+              "waterUsage": 3,
+              "waterCost": 36,
+              "electricityUsage": 13,
+              "electricityCost": 146.25,
+              "totalCost": 182.25
+            },
+            {
+              "day": "周三",
+              "waterUsage": 4,
+              "waterCost": 48,
+              "electricityUsage": 14,
+              "electricityCost": 157.5,
+              "totalCost": 205.5
+            },
+            {
+              "day": "周四",
+              "waterUsage": 3,
+              "waterCost": 36,
+              "electricityUsage": 13,
+              "electricityCost": 146.25,
+              "totalCost": 182.25
+            },
+            {
+              "day": "周五",
+              "waterUsage": 3,
+              "waterCost": 36,
+              "electricityUsage": 10,
+              "electricityCost": 112.5,
+              "totalCost": 148.5
+            },
+            {
+              "day": "周六",
+              "waterUsage": 1,
+              "waterCost": 12,
+              "electricityUsage": 4,
+              "electricityCost": 45,
+              "totalCost": 57
+            },
+            {
+              "day": "周日",
+              "waterUsage": 1,
+              "waterCost": 12,
+              "electricityUsage": 2,
+              "electricityCost": 22.5,
+              "totalCost": 34.5
+            }
+          ],
+          "monthlyTotal": {
+            "waterUsage": 19,
+            "waterCost": 228,
+            "electricityUsage": 70,
+            "electricityCost": 787.5,
+            "totalCost": 1015.5
+          }
+        },
+        {
+          "floor": 3,
+          "weeklyUsage": [
+            {
+              "day": "周一",
+              "waterUsage": 5,
+              "waterCost": 60,
+              "electricityUsage": 16,
+              "electricityCost": 180,
+              "totalCost": 240
+            },
+            {
+              "day": "周二",
+              "waterUsage": 4,
+              "waterCost": 48,
+              "electricityUsage": 15,
+              "electricityCost": 168.75,
+              "totalCost": 216.75
+            },
+            {
+              "day": "周三",
+              "waterUsage": 5,
+              "waterCost": 60,
+              "electricityUsage": 16,
+              "electricityCost": 180,
+              "totalCost": 240
+            },
+            {
+              "day": "周四",
+              "waterUsage": 4,
+              "waterCost": 48,
+              "electricityUsage": 15,
+              "electricityCost": 168.75,
+              "totalCost": 216.75
+            },
+            {
+              "day": "周五",
+              "waterUsage": 4,
+              "waterCost": 48,
+              "electricityUsage": 12,
+              "electricityCost": 135,
+              "totalCost": 183
+            },
+            {
+              "day": "周六",
+              "waterUsage": 2,
+              "waterCost": 24,
+              "electricityUsage": 6,
+              "electricityCost": 67.5,
+              "totalCost": 91.5
+            },
+            {
+              "day": "周日",
+              "waterUsage": 1,
+              "waterCost": 12,
+              "electricityUsage": 3,
+              "electricityCost": 33.75,
+              "totalCost": 45.75
+            }
+          ],
+          "monthlyTotal": {
+            "waterUsage": 25,
+            "waterCost": 300,
+            "electricityUsage": 83,
+            "electricityCost": 933.75,
+            "totalCost": 1233.75
+          }
+        },
+        {
+          "floor": 4,
+          "weeklyUsage": [
+            {
+              "day": "周一",
+              "waterUsage": 6,
+              "waterCost": 72,
+              "electricityUsage": 18,
+              "electricityCost": 202.5,
+              "totalCost": 274.5
+            },
+            {
+              "day": "周二",
+              "waterUsage": 5,
+              "waterCost": 60,
+              "electricityUsage": 17,
+              "electricityCost": 191.25,
+              "totalCost": 251.25
+            },
+            {
+              "day": "周三",
+              "waterUsage": 6,
+              "waterCost": 72,
+              "electricityUsage": 18,
+              "electricityCost": 202.5,
+              "totalCost": 274.5
+            },
+            {
+              "day": "周四",
+              "waterUsage": 5,
+              "waterCost": 60,
+              "electricityUsage": 17,
+              "electricityCost": 191.25,
+              "totalCost": 251.25
+            },
+            {
+              "day": "周五",
+              "waterUsage": 5,
+              "waterCost": 60,
+              "electricityUsage": 14,
+              "electricityCost": 157.5,
+              "totalCost": 217.5
+            },
+            {
+              "day": "周六",
+              "waterUsage": 3,
+              "waterCost": 36,
+              "electricityUsage": 8,
+              "electricityCost": 90,
+              "totalCost": 126
+            },
+            {
+              "day": "周日",
+              "waterUsage": 2,
+              "waterCost": 24,
+              "electricityUsage": 4,
+              "electricityCost": 45,
+              "totalCost": 69
+            }
+          ],
+          "monthlyTotal": {
+            "waterUsage": 32,
+            "waterCost": 384,
+            "electricityUsage": 96,
+            "electricityCost": 1080,
+            "totalCost": 1464
+          }
+        },
+        {
+          "floor": 5,
+          "weeklyUsage": [
+            {
+              "day": "周一",
+              "waterUsage": 7,
+              "waterCost": 84,
+              "electricityUsage": 20,
+              "electricityCost": 225,
+              "totalCost": 309
+            },
+            {
+              "day": "周二",
+              "waterUsage": 6,
+              "waterCost": 72,
+              "electricityUsage": 19,
+              "electricityCost": 213.75,
+              "totalCost": 285.75
+            },
+            {
+              "day": "周三",
+              "waterUsage": 7,
+              "waterCost": 84,
+              "electricityUsage": 20,
+              "electricityCost": 225,
+              "totalCost": 309
+            },
+            {
+              "day": "周四",
+              "waterUsage": 6,
+              "waterCost": 72,
+              "electricityUsage": 19,
+              "electricityCost": 213.75,
+              "totalCost": 285.75
+            },
+            {
+              "day": "周五",
+              "waterUsage": 6,
+              "waterCost": 72,
+              "electricityUsage": 16,
+              "electricityCost": 180,
+              "totalCost": 252
+            },
+            {
+              "day": "周六",
+              "waterUsage": 4,
+              "waterCost": 48,
+              "electricityUsage": 10,
+              "electricityCost": 112.5,
+              "totalCost": 160.5
+            },
+            {
+              "day": "周日",
+              "waterUsage": 3,
+              "waterCost": 36,
+              "electricityUsage": 5,
+              "electricityCost": 56.25,
+              "totalCost": 92.25
+            }
+          ],
+          "monthlyTotal": {
+            "waterUsage": 39,
+            "waterCost": 468,
+            "electricityUsage": 109,
+            "electricityCost": 1226.25,
+            "totalCost": 1694.25
+          }
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "name": "D栋教学楼",
+      "floors": [
+        {
+          "floor": 1,
+          "weeklyUsage": [
+            {
+              "day": "周一",
+              "waterUsage": 3.5,
+              "waterCost": 42,
+              "electricityUsage": 13,
+              "electricityCost": 146.25,
+              "totalCost": 188.25
+            },
+            {
+              "day": "周二",
+              "waterUsage": 2.5,
+              "waterCost": 30,
+              "electricityUsage": 12,
+              "electricityCost": 135,
+              "totalCost": 165
+            },
+            {
+              "day": "周三",
+              "waterUsage": 3.5,
+              "waterCost": 42,
+              "electricityUsage": 13,
+              "electricityCost": 146.25,
+              "totalCost": 188.25
+            },
+            {
+              "day": "周四",
+              "waterUsage": 2.5,
+              "waterCost": 30,
+              "electricityUsage": 12,
+              "electricityCost": 135,
+              "totalCost": 165
+            },
+            {
+              "day": "周五",
+              "waterUsage": 2.5,
+              "waterCost": 30,
+              "electricityUsage": 9,
+              "electricityCost": 101.25,
+              "totalCost": 131.25
+            },
+            {
+              "day": "周六",
+              "waterUsage": 1.5,
+              "waterCost": 18,
+              "electricityUsage": 3,
+              "electricityCost": 33.75,
+              "totalCost": 51.75
+            },
+            {
+              "day": "周日",
+              "waterUsage": 1,
+              "waterCost": 12,
+              "electricityUsage": 2,
+              "electricityCost": 22.5,
+              "totalCost": 34.5
+            }
+          ],
+          "monthlyTotal": {
+            "waterUsage": 17,
+            "waterCost": 204,
+            "electricityUsage": 64,
+            "electricityCost": 720,
+            "totalCost": 924
+          }
+        },
+        {
+          "floor": 2,
+          "weeklyUsage": [
+            {
+              "day": "周一",
+              "waterUsage": 4.5,
+              "waterCost": 54,
+              "electricityUsage": 15,
+              "electricityCost": 168.75,
+              "totalCost": 222.75
+            },
+            {
+              "day": "周二",
+              "waterUsage": 3.5,
+              "waterCost": 42,
+              "electricityUsage": 14,
+              "electricityCost": 157.5,
+              "totalCost": 199.5
+            },
+            {
+              "day": "周三",
+              "waterUsage": 4.5,
+              "waterCost": 54,
+              "electricityUsage": 15,
+              "electricityCost": 168.75,
+              "totalCost": 222.75
+            },
+            {
+              "day": "周四",
+              "waterUsage": 3.5,
+              "waterCost": 42,
+              "electricityUsage": 14,
+              "electricityCost": 157.5,
+              "totalCost": 199.5
+            },
+            {
+              "day": "周五",
+              "waterUsage": 3.5,
+              "waterCost": 42,
+              "electricityUsage": 11,
+              "electricityCost": 123.75,
+              "totalCost": 165.75
+            },
+            {
+              "day": "周六",
+              "waterUsage": 2,
+              "waterCost": 24,
+              "electricityUsage": 5,
+              "electricityCost": 56.25,
+              "totalCost": 80.25
+            },
+            {
+              "day": "周日",
+              "waterUsage": 1.5,
+              "waterCost": 18,
+              "electricityUsage": 3,
+              "electricityCost": 33.75,
+              "totalCost": 51.75
+            }
+          ],
+          "monthlyTotal": {
+            "waterUsage": 23,
+            "waterCost": 276,
+            "electricityUsage": 77,
+            "electricityCost": 866.25,
+            "totalCost": 1142.25
+          }
+        },
+        {
+          "floor": 3,
+          "weeklyUsage": [
+            {
+              "day": "周一",
+              "waterUsage": 5.5,
+              "waterCost": 66,
+              "electricityUsage": 17,
+              "electricityCost": 191.25,
+              "totalCost": 257.25
+            },
+            {
+              "day": "周二",
+              "waterUsage": 4.5,
+              "waterCost": 54,
+              "electricityUsage": 16,
+              "electricityCost": 180,
+              "totalCost": 234
+            },
+            {
+              "day": "周三",
+              "waterUsage": 5.5,
+              "waterCost": 66,
+              "electricityUsage": 17,
+              "electricityCost": 191.25,
+              "totalCost": 257.25
+            },
+            {
+              "day": "周四",
+              "waterUsage": 4.5,
+              "waterCost": 54,
+              "electricityUsage": 16,
+              "electricityCost": 180,
+              "totalCost": 234
+            },
+            {
+              "day": "周五",
+              "waterUsage": 4.5,
+              "waterCost": 54,
+              "electricityUsage": 13,
+              "electricityCost": 146.25,
+              "totalCost": 200.25
+            },
+            {
+              "day": "周六",
+              "waterUsage": 3,
+              "waterCost": 36,
+              "electricityUsage": 7,
+              "electricityCost": 78.75,
+              "totalCost": 114.75
+            },
+            {
+              "day": "周日",
+              "waterUsage": 2,
+              "waterCost": 24,
+              "electricityUsage": 4,
+              "electricityCost": 45,
+              "totalCost": 69
+            }
+          ],
+          "monthlyTotal": {
+            "waterUsage": 29.5,
+            "waterCost": 354,
+            "electricityUsage": 90,
+            "electricityCost": 1012.5,
+            "totalCost": 1366.5
+          }
+        },
+        {
+          "floor": 4,
+          "weeklyUsage": [
+            {
+              "day": "周一",
+              "waterUsage": 6.5,
+              "waterCost": 78,
+              "electricityUsage": 19,
+              "electricityCost": 213.75,
+              "totalCost": 291.75
+            },
+            {
+              "day": "周二",
+              "waterUsage": 5.5,
+              "waterCost": 66,
+              "electricityUsage": 18,
+              "electricityCost": 202.5,
+              "totalCost": 268.5
+            },
+            {
+              "day": "周三",
+              "waterUsage": 6.5,
+              "waterCost": 78,
+              "electricityUsage": 19,
+              "electricityCost": 213.75,
+              "totalCost": 291.75
+            },
+            {
+              "day": "周四",
+              "waterUsage": 5.5,
+              "waterCost": 66,
+              "electricityUsage": 18,
+              "electricityCost": 202.5,
+              "totalCost": 268.5
+            },
+            {
+              "day": "周五",
+              "waterUsage": 5.5,
+              "waterCost": 66,
+              "electricityUsage": 15,
+              "electricityCost": 168.75,
+              "totalCost": 234.75
+            },
+            {
+              "day": "周六",
+              "waterUsage": 4,
+              "waterCost": 48,
+              "electricityUsage": 9,
+              "electricityCost": 101.25,
+              "totalCost": 149.25
+            },
+            {
+              "day": "周日",
+              "waterUsage": 3,
+              "waterCost": 36,
+              "electricityUsage": 5,
+              "electricityCost": 56.25,
+              "totalCost": 92.25
+            }
+          ],
+          "monthlyTotal": {
+            "waterUsage": 36.5,
+            "waterCost": 438,
+            "electricityUsage": 103,
+            "electricityCost": 1158.75,
+            "totalCost": 1596.75
+          }
+        },
+        {
+          "floor": 5,
+          "weeklyUsage": [
+            {
+              "day": "周一",
+              "waterUsage": 7.5,
+              "waterCost": 90,
+              "electricityUsage": 21,
+              "electricityCost": 236.25,
+              "totalCost": 326.25
+            },
+            {
+              "day": "周二",
+              "waterUsage": 6.5,
+              "waterCost": 78,
+              "electricityUsage": 20,
+              "electricityCost": 225,
+              "totalCost": 303
+            },
+            {
+              "day": "周三",
+              "waterUsage": 7.5,
+              "waterCost": 90,
+              "electricityUsage": 21,
+              "electricityCost": 236.25,
+              "totalCost": 326.25
+            },
+            {
+              "day": "周四",
+              "waterUsage": 6.5,
+              "waterCost": 78,
+              "electricityUsage": 20,
+              "electricityCost": 225,
+              "totalCost": 303
+            },
+            {
+              "day": "周五",
+              "waterUsage": 6.5,
+              "waterCost": 78,
+              "electricityUsage": 17,
+              "electricityCost": 191.25,
+              "totalCost": 269.25
+            },
+            {
+              "day": "周六",
+              "waterUsage": 5,
+              "waterCost": 60,
+              "electricityUsage": 11,
+              "electricityCost": 123.75,
+              "totalCost": 183.75
+            },
+            {
+              "day": "周日",
+              "waterUsage": 4,
+              "waterCost": 48,
+              "electricityUsage": 6,
+              "electricityCost": 67.5,
+              "totalCost": 115.5
+            }
+          ],
+          "monthlyTotal": {
+            "waterUsage": 43.5,
+            "waterCost": 522,
+            "electricityUsage": 116,
+            "electricityCost": 1305,
+            "totalCost": 1827
+          }
+        }
+      ]
+    }
+  ]
+}
