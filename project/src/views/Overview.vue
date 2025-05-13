@@ -2,7 +2,8 @@
   <div class="overview-container">
     <h3>第一周教学楼用水用电量</h3>
     <!-- 第一行：四栋教学楼的用水用电量卡片 -->
-    <el-row :gutter="20" class="card-row">
+
+    <el-row :gutter="20" class="card-row" id="chart-container">
       <el-col :span="6" v-for="building in buildings" :key="building.name">
         <el-card shadow="hover" class="building-card">
           <template #header>
@@ -58,17 +59,9 @@
 </template>
 
 <script setup>
-import {
-  ref,
-  onMounted,
-  watch,
-  computed,
-  onBeforeUnmount,
-  nextTick,
-} from "vue";
+import { ref, onMounted, computed, onBeforeUnmount } from "vue";
 import axios from "axios";
-import * as echarts from "echarts";
-import { ElMessage } from "element-plus";
+import { ElRadioGroup, ElRadioButton, ElMessage } from "element-plus";
 
 // 请求数据
 const buildings = ref([]);
@@ -76,6 +69,8 @@ const pieChart = ref(null);
 const lineChart = ref(null);
 const activeChartType = ref("water");
 const chartsInitialized = ref(false);
+const isLoading = ref(false);
+const isChartsLoading = ref(false);
 
 const chartTitle = computed(() => {
   return activeChartType.value === "water" ? "用水量统计" : "用电量统计";
@@ -85,78 +80,74 @@ const weekDays = ["周一", "周二", "周三", "周四", "周五", "周六", "�
 
 // 计算每栋楼的总用水量和总用电量
 const calculateBuildingTotals = (building) => {
-  let totalWater = 0;
-  let totalElectricity = 0;
-
-  building.floors.forEach((floor) => {
-    floor.weeklyUsage.forEach((day) => {
-      totalWater += day.waterUsage;
-      totalElectricity += day.electricityUsage;
-    });
-  });
+  const { water, electricity } = building.floors.reduce(
+    (acc, floor) => {
+      floor.weeklyUsage.forEach((day) => {
+        acc.water += day.waterUsage;
+        acc.electricity += day.electricityUsage;
+      });
+      return acc;
+    },
+    { water: 0, electricity: 0 }
+  );
 
   return {
-    totalWaterUsage: totalWater.toFixed(2),
-    totalElectricityUsage: totalElectricity.toFixed(2),
+    totalWaterUsage: water.toFixed(2),
+    totalElectricityUsage: electricity.toFixed(2),
   };
 };
 
-// 获取数据
-const fetchData = async () => {
+// 动态加载 ECharts
+const loadECharts = async () => {
+  if (window.echarts) return window.echarts;
+
+  isChartsLoading.value = true;
   try {
-    const response = await axios.get("http://localhost:3000/buildings");
-    const data = Array.isArray(response.data) ? response.data : [];
+    const echarts = await import("echarts/core");
+    const { PieChart, LineChart } = await import("echarts/charts");
+    const { TitleComponent, TooltipComponent, LegendComponent, GridComponent } =
+      await import("echarts/components");
+    const { CanvasRenderer } = await import("echarts/renderers");
 
-    buildings.value = data.map((building) => {
-      const totals = calculateBuildingTotals(building);
-      return {
-        ...building,
-        ...totals,
-      };
-    });
+    echarts.use([
+      PieChart,
+      LineChart,
+      TitleComponent,
+      TooltipComponent,
+      LegendComponent,
+      GridComponent,
+      CanvasRenderer,
+    ]);
 
-    initCharts();
-  } catch (error) {
-    ElMessage.error("数据加载失败");
-    console.error("Error fetching data:", error);
+    window.echarts = echarts;
+    return echarts;
+  } finally {
+    isChartsLoading.value = false;
   }
 };
 
 // 初始化图表
-const initCharts = () => {
-  nextTick(() => {
+const initCharts = async () => {
+  try {
+    await loadECharts();
+
     const pieElement = document.getElementById("pie-chart");
     const lineElement = document.getElementById("line-chart");
 
-    // 确保DOM元素存在
-    if (!pieElement || !lineElement) {
-      console.warn("图表容器未找到，将在下次尝试");
-      return;
+    if (pieElement && lineElement) {
+      pieChart.value = window.echarts.init(pieElement);
+      lineChart.value = window.echarts.init(lineElement);
+      chartsInitialized.value = true;
+      updateCharts();
     }
-
-    // 如果图表已经初始化，先销毁
-    if (pieChart.value) {
-      pieChart.value.dispose();
-    }
-    if (lineChart.value) {
-      lineChart.value.dispose();
-    }
-
-    // 初始化新图表
-    pieChart.value = echarts.init(pieElement);
-    lineChart.value = echarts.init(lineElement);
-    chartsInitialized.value = true;
-
-    updateCharts();
-  });
+  } catch (error) {
+    console.error("初始化图表失败:", error);
+  }
 };
 
 // 更新图表
 const updateCharts = () => {
-  // 确保图表已初始化且数据可用
-  if (!chartsInitialized.value || buildings.value.length === 0) {
-    return;
-  }
+  if (!chartsInitialized.value || buildings.value.length === 0) return;
 
   try {
     // 饼图数据
@@ -170,7 +161,7 @@ const updateCharts = () => {
 
     // 折线图数据
     const seriesData = buildings.value.map((building) => {
-      const weeklyData = [0, 0, 0, 0, 0, 0, 0]; // 初始化7天的数据
+      const weeklyData = [0, 0, 0, 0, 0, 0, 0];
 
       building.floors.forEach((floor) => {
         floor.weeklyUsage.forEach((day, index) => {
@@ -185,11 +176,13 @@ const updateCharts = () => {
         name: building.name,
         type: "line",
         data: weeklyData.map((value) => parseFloat(value.toFixed(1))),
+        smooth: true,
+        showSymbol: true,
       };
     });
 
     // 饼图配置
-    const pieOption = {
+    pieChart.value.setOption({
       title: {
         text: "各教学楼占比",
         left: "center",
@@ -218,10 +211,10 @@ const updateCharts = () => {
           },
         },
       ],
-    };
+    });
 
     // 折线图配置
-    const lineOption = {
+    lineChart.value.setOption({
       title: {
         left: "center",
       },
@@ -230,14 +223,14 @@ const updateCharts = () => {
         axisPointer: {
           type: "shadow",
         },
-        formatter: function (params) {
-          let result = params[0].axisValue + "<br/>";
-          params.forEach((item) => {
-            result += `${item.marker} ${item.seriesName}: ${item.value}${
-              activeChartType.value === "water" ? "吨" : "度"
-            }<br/>`;
-          });
-          return result;
+
+        formatter: (params) => {
+          const unit = activeChartType.value === "water" ? "吨" : "度";
+          return params.reduce(
+            (str, item) =>
+              `${str}${item.marker} ${item.seriesName}: ${item.value}${unit}<br/>`,
+            `${params[0].axisValue}<br/>`
+          );
         },
       },
       legend: {
@@ -260,13 +253,37 @@ const updateCharts = () => {
         name: activeChartType.value === "water" ? "用水量(吨)" : "用电量(度)",
       },
       series: seriesData,
-    };
-
-    // 安全地设置图表选项
-    pieChart.value?.setOption(pieOption);
-    lineChart.value?.setOption(lineOption);
+    });
   } catch (error) {
     console.error("更新图表时出错:", error);
+  }
+};
+
+// 获取数据
+const fetchData = async () => {
+  if (isLoading.value) return;
+
+  isLoading.value = true;
+  try {
+    const { data } = await axios.get("http://localhost:3000/buildings");
+    const dataArray = Array.isArray(data) ? data : [];
+
+    buildings.value = dataArray.map((building) => ({
+      name: building.name,
+      floors: building.floors || [],
+      ...calculateBuildingTotals(building),
+    }));
+
+    if (!chartsInitialized.value) {
+      await initCharts();
+    } else {
+      updateCharts();
+    }
+  } catch (error) {
+    console.error("Error fetching data:", error);
+    ElMessage.error("数据加载失败");
+  } finally {
+    isLoading.value = false;
   }
 };
 
@@ -277,79 +294,25 @@ const handleChartChange = () => {
 
 // 窗口大小变化时重新调整图表大小
 const handleResize = () => {
-  pieChart.value?.resize();
-  lineChart.value?.resize();
+  if (pieChart.value) pieChart.value.resize();
+  if (lineChart.value) lineChart.value.resize();
 };
+
+let pollingInterval;
 
 onMounted(() => {
   fetchData();
+  pollingInterval = setInterval(fetchData, 5000);
   window.addEventListener("resize", handleResize);
 });
 
 onBeforeUnmount(() => {
   window.removeEventListener("resize", handleResize);
-  pieChart.value?.dispose();
-  lineChart.value?.dispose();
+  if (pieChart.value) pieChart.value.dispose();
+  if (lineChart.value) lineChart.value.dispose();
+  clearInterval(pollingInterval);
 });
-
-// 监听数据变化
-watch(
-  buildings,
-  () => {
-    updateCharts();
-  },
-  { deep: true }
-);
 </script>
-
 <style scoped>
-h3 {
-  margin: 10px;
-}
-
-.card-row {
-  margin-bottom: 20px;
-}
-
-.building-card {
-  height: 100%;
-}
-
-.card-header {
-  font-weight: bold;
-  font-size: 16px;
-}
-
-.card-content {
-  padding: 10px;
-}
-
-.stat-item {
-  display: flex;
-  align-items: center;
-  margin-bottom: 10px;
-}
-
-.stat-item .el-icon {
-  margin-right: 8px;
-  color: var(--el-color-primary);
-}
-
-.chart-row {
-  margin-top: 20px;
-}
-
-.chart-card {
-  height: 400px;
-}
-
-.chart-container1 {
-  width: 100%;
-  height: 350px;
-}
-
-.chart-container2 {
-  width: 100%;
-  height: 320px;
-}
+@import url(../style/css1.css);
 </style>

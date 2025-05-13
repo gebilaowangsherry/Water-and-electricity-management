@@ -1,5 +1,4 @@
 import { createRouter, createWebHistory } from "vue-router";
-import Overview from "../views/Overview.vue";
 
 const routes = [
   {
@@ -9,7 +8,7 @@ const routes = [
   {
     path: "/overview",
     name: "Overview",
-    component: Overview,
+    component: () => import("../views/Overview.vue"),
   },
   {
     path: "/detail",
