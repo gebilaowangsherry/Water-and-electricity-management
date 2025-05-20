@@ -30,12 +30,18 @@ export default defineConfig({
     chunkSizeWarningLimit: 2000,
     rollupOptions: {
       output: {
-        manualChunks: {
-          // 将大依赖拆分为单独 chunk
-          "element-plus": ["element-plus"],
-          "echarts-core": ["echarts/core"],
-          "echarts-charts": ["echarts/charts"],
-          "vue-runtime": ["@vue/runtime-core"],
+        manualChunks: (id) => {
+          // 更安全的手动分块策略
+          if (id.includes("node_modules")) {
+            if (id.includes("element-plus")) {
+              return "element-plus";
+            }
+            if (id.includes("echarts")) {
+              return "echarts";
+            }
+            // 不要单独拆分vue运行时，保持在一起
+            return "vendor";
+          }
         },
         chunkFileNames: "js/[name]-[hash].js",
       },
